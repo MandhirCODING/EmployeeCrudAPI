@@ -8,5 +8,9 @@ import com.example.employeeApi.Model.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
+
+	Employee findByEmpcity(String emp_city);
+
+	Optional<List<Employee>> findByEmpageGreaterThan(int emp_age);
 	
 }
